@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="app-version" content="3.0-20260928">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eduardo Barber Profissional</title>
+<meta name="description" content="Eduardo Barber Profissional. Barbearia em São José dos Pinhais. Escolha o dia e o horário e confirme pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0e;--soft:#151517;--line:#2a2a2d;--fg:#f3f1ec;--mute:#8f8d88;--gold:#b89a5e;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;
+box-sizing:border-box;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--fg);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{position:absolute;top:0;left:0;right:0;z-index:5;pointer-events:none}header a{pointer-events:auto}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+.mark{font:500 20px/1 var(--serif);letter-spacing:.04em}
+.link{font-size:15px;color:var(--mute);border-bottom:1px solid transparent;transition:color .4s,border-color .4s}
+.link:hover{color:var(--fg);border-color:var(--gold)}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;text-align:center;background:radial-gradient(ellipse at 50% 38%,#1a1a1c 0%,var(--bg) 70%)}
+.hero .wrap{padding:120px 24px 80px}
+h1{font:500 clamp(44px,9vw,104px)/1.02 var(--serif);letter-spacing:.01em;margin:0}
+h1 span{display:block;font-size:.42em;font-weight:400;letter-spacing:.32em;margin-top:.9em;color:var(--gold);text-transform:uppercase}
+.sub{font:italic 400 clamp(20px,3vw,26px)/1.3 var(--serif);color:var(--mute);margin:34px 0 52px}
+.btn{display:inline-block;border:1px solid var(--gold);background:none;cursor:pointer;color:var(--fg);font-size:14px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;padding:18px 40px;transition:background .5s,color .5s,opacity .4s}
+.btn:hover{background:var(--gold);color:#0d0d0e}
+.btn[disabled]{opacity:.3;pointer-events:none}
+section.s{padding:clamp(90px,16vw,180px) 0;border-top:1px solid var(--line)}
+h2{font:500 clamp(32px,5vw,48px)/1.1 var(--serif);margin:0 0 56px;text-align:center}
+.list{list-style:none;margin:0 auto;padding:0;max-width:520px}
+.list li{font:400 clamp(26px,4vw,34px)/1 var(--serif);padding:26px 0;border-bottom:1px solid var(--line);text-align:center}
+.list li:first-child{border-top:1px solid var(--line)}
+.book{max-width:680px;margin:0 auto}
+.lbl{font:400 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 18px;text-align:center}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:56px}
+.day{background:none;border:1px solid var(--line);padding:16px 4px;cursor:pointer;text-align:center;line-height:1.3;transition:border-color .3s,background .3s,color .3s}
+.day b{display:block;font:500 17px/1.2 var(--serif);letter-spacing:.02em}
+.day small{font-size:13px;color:var(--mute)}
+.day:hover{border-color:var(--gold)}
+.day[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#0d0d0e}
+.day[aria-pressed=true] small{color:#3b3120}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:56px}
+.slot{background:none;border:1px solid var(--line);padding:16px 0;cursor:pointer;font:400 18px/1 var(--sans);letter-spacing:.04em;transition:border-color .3s,background .3s,color .3s}
+.slot:hover{border-color:var(--gold)}
+.slot[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#0d0d0e}
+.slot[disabled]{color:#4b4a48;text-decoration:line-through;cursor:not-allowed;border-color:var(--soft)}
+.svcs{margin-bottom:40px}.svcs .slot{font-size:16px}
+.btn[aria-disabled=true]{opacity:.45;cursor:not-allowed}
+.list li small{display:block;font:300 15px/1.4 var(--sans);color:var(--gold);margin-top:8px}
+.days{grid-template-columns:repeat(5,1fr);gap:6px}
+.slot small{display:block;font:300 11px/1.2 var(--sans);margin-top:5px;letter-spacing:.02em}
+.slot.oc{color:#d46a63;border-color:#4a2624;text-decoration:none}
+.slot.pa{color:#5a5957;border-color:var(--soft);text-decoration:none}
+.slot[disabled]{cursor:not-allowed}
+.slot[aria-pressed=true] small{color:#3b3120}
+.svcs{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+#admBtn{background:none;border:0;color:var(--mute);cursor:pointer;font-size:13px;margin-top:10px;text-decoration:underline}
+#adm{position:fixed;top:0;right:0;bottom:0;left:0;z-index:50;background:var(--bg);overflow:auto;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+.ap{max-width:860px;margin:0 auto;padding:20px 16px 60px;font-size:15px}
+.ah{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font:500 24px var(--serif)}
+.ap nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.ap button,.ap select,.ap input:not([type=checkbox]){background:var(--soft);border:1px solid var(--line);color:var(--fg);padding:10px 12px;border-radius:0;font-size:15px}
+.ap button{cursor:pointer}.ap button:hover{border-color:var(--gold)}
+.ap button[aria-pressed=true]{background:var(--gold);color:#0d0d0e;border-color:var(--gold)}
+.ap h3{font:500 22px var(--serif);margin:26px 0 12px;color:var(--gold)}
+.ap label{display:block;margin:10px 0 4px;color:var(--mute);font-size:13px}
+.ap input:not([type=checkbox]),.ap select{width:100%}
+.card{border:1px solid var(--line);padding:14px;margin-bottom:10px;line-height:1.6}
+.card .bt{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.st{font-size:12px;padding:2px 8px;border:1px solid var(--line);margin-left:8px}
+.st-pendente{color:#e0b64a}.st-confirmado{color:#5cc26f}.st-cancelado{color:#d46a63}.st-concluido{color:#8f8d88}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{border:1px solid var(--line);padding:4px 10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row{display:grid;grid-template-columns:2fr 1fr auto auto;gap:8px;align-items:center;margin-bottom:8px}
+.dz{display:flex;flex-wrap:wrap;gap:14px}.dz label{display:flex;gap:6px;align-items:center;margin:0;color:var(--fg);font-size:15px}
+.bg{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px}
+.bg button.o{color:#d46a63;border-color:#4a2624}.bg button.b{color:#8f8d88;background:#000}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--gold);color:#0d0d0e;padding:10px 18px;z-index:60;font-size:15px;display:none}
+@media(max-width:600px){.g2{grid-template-columns:1fr}.row{grid-template-columns:1fr 1fr}}
+
+.hint{text-align:center;color:var(--mute);margin:0 0 56px}
+.name{display:block;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:14px 0;text-align:center;font:400 22px/1.2 var(--serif);border-radius:0;margin-bottom:40px}
+.name::placeholder{color:var(--mute)}
+.name:focus{outline:0;border-color:var(--gold)}
+.sum{text-align:center;font:400 22px/1.4 var(--serif);min-height:32px;margin:0 0 32px}
+.go{text-align:center}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:720px;margin:0 auto;text-align:center}
+.info h3{font:400 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 20px}
+.info p{margin:0;font:400 22px/1.5 var(--serif)}
+.info p small{display:block;font:300 15px/1.5 var(--sans);color:var(--mute);margin-top:6px}
+footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:var(--mute);font-size:13px;letter-spacing:.04em}
+@media(max-width:600px){.info{grid-template-columns:1fr;gap:44px}.btn{padding:17px 32px}.slots{grid-template-columns:repeat(3,1fr)}.day{padding:14px 0}.day b{font-size:15px}}
+
+button,.btn,.day,.slot,a,select,input[type=checkbox]{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba(184,154,94,.25)}
+.btn{min-height:52px;font-family:inherit;line-height:1.2;position:relative;z-index:2}
+.day,.slot{min-height:52px}
+.link{display:inline-block;padding:14px 6px}
+#admBtn{min-height:44px;padding:10px 14px}
+.ap button,.ap select,.ap input:not([type=checkbox]){font-size:16px;min-height:44px}
+.ap input[type=checkbox]{width:22px;height:22px}
+#toast{pointer-events:none}
+.hero .wrap,.book,.info,.list{position:relative;z-index:1}
+#ok .sum small{display:block;font:300 15px/1.5 var(--sans);color:var(--mute);margin:8px 0 18px}
+.day{display:block;width:100%;padding:12px 0;overflow:hidden;font-family:inherit;color:var(--fg)}
+.day[disabled]{opacity:.35;cursor:not-allowed}
+.day b{font-size:14px}.day small{font-size:12px}
+@media(max-width:400px){.day b{font-size:12px}.day small{font-size:11px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><span class="mark" id="mk">Eduardo Barber</span><a class="link" href="#agendar">Agendar</a></div></header>
+
+<noscript><p style="padding:90px 24px;text-align:center">Ative o JavaScript para agendar.</p></noscript>
+<main>
+<section class="hero"><div class="wrap">
+<h1 id="h1">Eduardo Barber<span>Profissional</span></h1>
+<p class="sub">Seu estilo começa aqui.</p>
+<a class="btn" href="#agendar">Agendar horário</a>
+</div></section>
+
+<section class="s"><div class="wrap">
+<h2>Serviços</h2>
+<ul class="list" id="svlist"><li>Degradê</li><li>Corte</li><li>Desenhos</li><li>Barba</li></ul>
+</div></section>
+
+<section class="s" id="agendar"><div class="wrap">
+<h2>Agende seu horário</h2>
+<div class="book">
+<p class="lbl">1. Escolha o dia</p>
+<div class="days" id="days"><button type="button" class="day" data-w="1" aria-pressed="false"><b>Segunda</b><small>&nbsp;</small></button><button type="button" class="day" data-w="2" aria-pressed="false"><b>Terça</b><small>&nbsp;</small></button><button type="button" class="day" data-w="3" aria-pressed="false"><b>Quarta</b><small>&nbsp;</small></button><button type="button" class="day" data-w="4" aria-pressed="false"><b>Quinta</b><small>&nbsp;</small></button><button type="button" class="day" data-w="5" aria-pressed="false"><b>Sexta</b><small>&nbsp;</small></button></div>
+<div id="step2" hidden>
+<p class="lbl">2. Escolha o horário</p>
+<div class="slots" id="slots"></div>
+</div>
+<div id="ok" class="go" hidden><p class="sum">✅ Horário reservado!<small>Se o WhatsApp não abrir sozinho, toque no botão abaixo para enviar a confirmação.</small></p><a class="btn" id="wa2" href="#" target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a></div>
+<p class="hint" id="hint" hidden></p>
+<div id="step3" hidden>
+<p class="lbl">3. Serviço e seus dados</p>
+<div class="slots svcs" id="svcs"><button type="button" class="slot" data-id="1" aria-pressed="false">Degradê</button><button type="button" class="slot" data-id="2" aria-pressed="false">Corte</button><button type="button" class="slot" data-id="3" aria-pressed="false">Desenhos</button><button type="button" class="slot" data-id="4" aria-pressed="false">Barba</button></div>
+<input class="name" id="name" type="text" placeholder="Seu nome" autocomplete="given-name" maxlength="40" aria-label="Seu nome">
+<input class="name" id="tel" type="tel" inputmode="tel" placeholder="Seu telefone com DDD" autocomplete="tel" maxlength="20" aria-label="Seu telefone">
+<p class="sum" id="sum"></p>
+<div class="go"><button type="button" class="btn" id="send" aria-disabled="true">Confirmar agendamento</button></div>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="contato"><div class="wrap">
+<div class="info" id="info"></div></div></section>
+</main>
+
+<footer>© <span id="y"></span> <span id="fn"></span><br><button id="admBtn" type="button">Área administrativa</button></footer>
+<div id="adm" hidden><div class="ap"><div class="ah"><span>Área administrativa</span><button id="admX" type="button">Fechar</button></div><div id="admBody"></div></div></div><div id="toast"></div>
+
+
+<script>
+/* =====================================================================
+   CONFIGURAÇÃO IMPORTANTE (1 minuto):
+   Para os horários ocupados valerem para TODOS os celulares, cole abaixo a URL
+   do seu Firebase Realtime Database, ex.: 'https://eduardo-barber-default-rtdb.firebaseio.com'
+   (passo a passo na resposta do chat). Vazio = modo local (só neste aparelho).
+   ===================================================================== */
+var DB_URL='';
+
+document.addEventListener('DOMContentLoaded',function(){
+var K='eb_v1',NM=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+var EP=DB_URL?DB_URL.replace(/\/+$/,'')+'/eb.json':'';
+var DEF={init:1,cfg:{nome:'Eduardo Barber Profissional',wa:'554188028873',end:'R. Lauro Muller, 279, São José dos Pinhais',insta:'',sh:'',abre:'09:00',fecha:'17:00',int:30,dias:[0,1,1,1,1,1,0]},bloq:{},svcs:[{id:1,nome:'Degradê',preco:0,ativo:true},{id:2,nome:'Corte',preco:0,ativo:true},{id:3,nome:'Desenhos',preco:0,ativo:true},{id:4,nome:'Barba',preco:0,ativo:true}],ags:[],seq:10};
+var $=function(i){return document.getElementById(i)};
+/* compatibilidade */
+if(!Element.prototype.closest){Element.prototype.closest=function(s){var e=this;while(e&&e.nodeType===1){if((e.matches||e.msMatchesSelector||e.webkitMatchesSelector).call(e,s))return e;e=e.parentNode}return null}}
+/* remove service workers/caches antigos */
+try{if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations)navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(x){x.unregister()})}).catch(function(){});if(window.caches&&caches.keys)caches.keys().then(function(k){k.forEach(function(n){caches.delete(n)})}).catch(function(){})}catch(e){}
+/* liga evento isolando erros: um botão quebrado nunca derruba os outros */
+function on(t,ev,fn){var el=typeof t==='string'?$(t):t;if(!el)return;el.addEventListener(ev,function(e){try{fn(e)}catch(err){try{console.error(err);toast('Ocorreu um erro. Tente novamente.')}catch(z){}}})}
+function T(fn){try{fn()}catch(e){try{console.error(e)}catch(z){}}}
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function hs(s){var a=0xdeadbeef,b=0x41c6ce57;for(var i=0;i<s.length;i++){var c=s.charCodeAt(i);a=Math.imul(a^c,2654435761);b=Math.imul(b^c,1597334677)}a=Math.imul(a^(a>>>16),2246822507)^Math.imul(b^(b>>>13),3266489909);b=Math.imul(b^(b>>>16),2246822507)^Math.imul(a^(a>>>13),3266489909);return(4294967296*(2097151&b)+(a>>>0)).toString(36)}
+function pw(p){return hs('eb|'+p)}
+T(function(){DEF.cfg.sh=pw('1234')});
+/* ===== DADOS: servidor (Firebase) + cache local ===== */
+function toArr(v){if(!v)return[];if(Array.isArray(v))return v.filter(function(x){return x!=null});return Object.keys(v).map(function(k){return v[k]}).filter(function(x){return x!=null})}
+function norm(d){
+  var x=clone(DEF),k;
+  if(!d||typeof d!=='object')return x;
+  if(d.cfg){
+    for(k in d.cfg)x.cfg[k]=d.cfg[k];
+    if(d.cfg.senha&&!d.cfg.sh)x.cfg.sh=pw(String(d.cfg.senha));
+    delete x.cfg.senha;
+    if(d.cfg.dias){var dd=d.cfg.dias;x.cfg.dias=[0,1,2,3,4,5,6].map(function(i){return dd[i]?1:0})}
+    x.cfg.int=+x.cfg.int||30;
+    ['nome','wa','end','insta','abre','fecha'].forEach(function(k){x.cfg[k]=String(x.cfg[k]==null?DEF.cfg[k]:x.cfg[k])});
+  }
+  if(d.svcs||d.init)x.svcs=toArr(d.svcs).map(function(s){return{id:+s.id,nome:String(s.nome||''),preco:+s.preco||0,ativo:!!s.ativo}});
+  x.ags=toArr(d.ags);x.bloq={};
+  if(d.bloq)for(k in d.bloq){var l=toArr(d.bloq[k]);if(l.length)x.bloq[k]=l}
+  x.seq=+d.seq||x.seq;x.init=1;return x;
+}
+function readLocal(){try{var r=localStorage.getItem(K);if(r)return JSON.parse(r)}catch(e){}return null}
+function writeLocal(d){try{localStorage.setItem(K,JSON.stringify(d))}catch(e){}}
+var STATE=clone(DEF),net=EP?'?':'local';T(function(){STATE=norm(readLocal())});
+function load(){return STATE}
+function req(m,u,b,h,cb){
+  var x=new XMLHttpRequest(),done=false;
+  function fin(s,t,e){if(done)return;done=true;cb(s,t,e)}
+  try{
+    x.open(m,u,true);x.timeout=12000;for(var k in h)x.setRequestHeader(k,h[k]);
+    x.onload=function(){var e=null;try{e=x.getResponseHeader('ETag')}catch(z){}fin(x.status,x.responseText,e)};
+    x.onerror=x.ontimeout=function(){fin(0,'',null)};
+    x.send(b);
+  }catch(e){fin(0,'',null)}
+}
+function parse(t){try{return JSON.parse(t)}catch(e){return null}}
+function sync(cb){
+  if(!EP){STATE=norm(readLocal());net='local';if(cb)cb();return}
+  req('GET',EP,null,{'X-Firebase-ETag':'true'},function(s,t){
+    if(s===200){STATE=norm(parse(t));writeLocal(STATE);net='ok'}else net='off';
+    if(cb)cb();
+  });
+}
+/* transação: lê o dado mais novo, aplica fn(d), grava só se ninguém alterou antes (ETag); repete se houve conflito */
+function tx(fn,cb,n){
+  n=n||0;
+  if(!EP){var d0=norm(readLocal()),r0=fn(d0);if(r0===false||(r0&&r0.err)){STATE=d0;cb(false,r0||{});return}STATE=d0;writeLocal(d0);cb(true,r0);return}
+  req('GET',EP,null,{'X-Firebase-ETag':'true'},function(s,t,et){
+    if(s!==200){net='off';cb(false,{err:'Sem conexão com o servidor. Tente novamente.'});return}
+    var d=norm(parse(t)),r=fn(d);
+    if(r===false||(r&&r.err)){STATE=d;writeLocal(d);net='ok';cb(false,r||{});return}
+    var h={};if(et)h['if-match']=et;
+    req('PUT',EP,JSON.stringify(d),h,function(s2){
+      if(s2===200){STATE=d;writeLocal(d);net='ok';cb(true,r)}
+      else if(s2===412&&n<5)tx(fn,cb,n+1);
+      else cb(false,{err:'Não foi possível salvar. Verifique a conexão.'});
+    });
+  });
+}
+var p2=function(n){return('0'+n).slice(-2)};
+function iso(d){return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())}
+function br(s){var p=s.split('-');return p[2]+'/'+p[1]}
+function tm(t){var p=t.split(':');return+p[0]*60+ +p[1]}
+function fm(m){return p2(Math.floor(m/60))+':'+p2(m%60)}
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function money(v){return'R$ '+Number(v).toFixed(2).replace('.',',')}
+function nowHM(){var n=new Date();return p2(n.getHours())+':'+p2(n.getMinutes())}
+function slotsOf(c){var a=[],e=tm(c.fecha);for(var m=tm(c.abre);m+c.int<=e;m+=c.int)a.push(fm(m));return a}
+function past(ds,t){var h=iso(new Date());return ds<h||(ds===h&&t<=nowHM())}
+function estado(ds,t,d){
+  if((d.bloq[ds]||[]).indexOf(t)>-1)return'bloq';
+  if(d.ags.some(function(a){return a.data===ds&&a.hora===t&&a.status!=='cancelado'}))return'ocup';
+  return past(ds,t)?'past':'livre';
+}
+function diasAbertos(d){
+  var r=[],n=new Date();
+  for(var i=0;i<30&&r.length<7;i++){
+    var x=new Date(n.getFullYear(),n.getMonth(),n.getDate()+i),s=iso(x);
+    if(!d.cfg.dias[x.getDay()])continue;
+    if(slotsOf(d.cfg).some(function(t){var e=estado(s,t,d);return e!=='bloq'&&e!=='past'||e==='ocup'&&!past(s,t)}))r.push({s:s,w:x.getDay()});
+  }
+  return r;
+}
+function diasTxt(c){
+  var a=[];c.dias.forEach(function(v,i){if(v)a.push(i)});if(!a.length)return'Fechado';
+  var seq=a.every(function(v,i){return i===0||v===a[i-1]+1});
+  return seq&&a.length>2?NM[a[0]]+' a '+NM[a[a.length-1]].toLowerCase():a.map(function(i){return NM[i]}).join(', ');
+}
+function instaUrl(v){return/^http/i.test(v)?v:'https://instagram.com/'+v.replace('@','')}
+/* ===== SITE ===== */
+var selDate=null,slot=null,svc=null;
+function renderSite(){
+  var d=load(),c=d.cfg;
+  T(function(){var w=c.nome.split(' ');document.title=c.nome;$('mk').textContent=w.slice(0,2).join(' ');$('fn').textContent=c.nome;
+    $('h1').innerHTML=esc(w.slice(0,2).join(' '))+(w.length>2?'<span>'+esc(w.slice(2).join(' '))+'</span>':'')});
+  T(function(){var ativos=d.svcs.filter(function(s){return s.ativo});
+    $('svlist').innerHTML=ativos.map(function(s){return'<li>'+esc(s.nome)+(s.preco>0?'<small>'+money(s.preco)+'</small>':'')+'</li>'}).join('');
+    if(svc&&!ativos.some(function(s){return s.id===svc}))svc=null;
+    $('svcs').innerHTML=ativos.map(function(s){return'<button type="button" class="slot" data-id="'+s.id+'" aria-pressed="'+(s.id===svc)+'">'+esc(s.nome)+(s.preco>0?'<small>'+money(s.preco)+'</small>':'')+'</button>'}).join('')});
+  T(function(){var ad=c.end.split(',');
+    $('info').innerHTML='<div><h3>Horário</h3><p>'+diasTxt(c)+'<small>'+c.abre+' às '+c.fecha+'</small></p></div><div><h3>Endereço</h3><p>'+esc(ad[0])+'<small>'+esc(ad.slice(1).join(',').trim())+(c.insta?'<br><a class="link" target="_blank" rel="noopener" href="'+esc(instaUrl(c.insta))+'">Instagram</a>':'')+'</small></p></div>'});
+  T(renderDays);
+  T(update);
+}
+/* Semana atual (seg–sex). Sábado/domingo mostram a próxima semana. */
+function weekDays(){
+  var n=new Date(),w=n.getDay(),off=w===0?1:(w===6?2:1-w),r=[];
+  for(var i=0;i<5;i++){var x=new Date(n.getFullYear(),n.getMonth(),n.getDate()+off+i);r.push({s:iso(x),w:i+1})}
+  return r;
+}
+/* Os 5 botões já existem no HTML; aqui só preenchemos datas e estados. */
+function renderDays(){
+  var d=load(),wd=weekDays(),bt=$('days').getElementsByTagName('button'),hj=iso(new Date());
+  for(var i=0;i<bt.length&&i<5;i++){
+    var x=wd[i],b=bt[i],sm=b.getElementsByTagName('small')[0],fechado=!d.cfg.dias[x.w],passou=x.s<hj;
+    b.setAttribute('data-s',x.s);
+    if(sm)sm.textContent=fechado?'Fechado':br(x.s);
+    b.disabled=!!(fechado||passou);
+    b.setAttribute('aria-pressed',(x.s===selDate)?'true':'false');
+    if(x.s===selDate&&b.disabled){selDate=null;slot=null;b.setAttribute('aria-pressed','false')}
+  }
+  renderSlots();
+}
+function renderSlots(){
+  var d=load();
+  $('step2').hidden=!selDate;
+  if(!selDate){$('step3').hidden=true;$('hint').hidden=true;return}
+  if(slot&&estado(selDate,slot,d)!=='livre')slot=null;
+  var h='',livres=0;
+  slotsOf(d.cfg).forEach(function(t){
+    var e=estado(selDate,t,d);if(e==='bloq')return;
+    if(e==='livre'){livres++;var sel=t===slot;h+='<button type="button" class="slot" data-t="'+t+'" aria-pressed="'+sel+'">'+(sel?'🟡':'🟢')+' '+t+'</button>'}
+    else h+='<button type="button" class="slot '+(e==='ocup'?'oc':'pa')+'" disabled aria-label="'+t+' indisponível">'+(e==='ocup'?'🔴':'⚫')+' '+t+'<small>Indisponível</small></button>';
+  });
+  $('slots').innerHTML=h;$('step3').hidden=!slot;
+  $('hint').hidden=!!slot;
+  $('hint').textContent=livres?'Toque em um horário livre.':'Sem horários livres neste dia. Escolha outro dia.';
+}
+function ready(){return!!(selDate&&slot&&svc&&$('name').value.trim().length>1&&$('tel').value.replace(/\D/g,'').length>=10)}
+function waUrl(){return'https://wa.me/'+load().cfg.wa.replace(/\D/g,'')}
+function update(){
+  var d=load(),s=d.svcs.filter(function(x){return x.id===svc})[0];
+  $('sum').textContent=selDate&&slot?NM[new Date(selDate+'T12:00').getDay()]+', '+br(selDate)+' às '+slot+(s?' · '+s.nome+(s.preco>0?' · '+money(s.preco):''):''):'';
+  $('send').setAttribute('aria-disabled',ready()?'false':'true');
+}
+function msg(s){
+  return'🔔 NOVO AGENDAMENTO\n\n👤 Nome: '+$('name').value.trim()+'\n\n📱 Telefone: '+$('tel').value.trim()+'\n\n💈 Serviço: '+s.nome+'\n\n📅 Dia: '+NM[new Date(selDate+'T12:00').getDay()]+', '+br(selDate)+'/'+selDate.slice(0,4)+'\n\n🕐 Horário: '+slot;
+}
+on('days','click',function(e){var b=e.target.closest('.day');if(!b||b.disabled)return;var ds0=b.getAttribute('data-s');if(!ds0)return;selDate=ds0;slot=null;$('ok').hidden=true;renderDays();update()});
+on('slots','click',function(e){
+  var b=e.target.closest('.slot');if(!b||b.disabled||!b.dataset.t)return;
+  slot=b.dataset.t;$('ok').hidden=true;renderSlots();update();
+});
+on('svcs','click',function(e){var b=e.target.closest('.slot');if(!b)return;svc=+b.dataset.id;
+  [].forEach.call($('svcs').children,function(x){x.setAttribute('aria-pressed',+x.dataset.id===svc)});update()});
+['name','tel'].forEach(function(id){['input','change','keyup','blur'].forEach(function(ev){on(id,ev,update)})});
+var busy=false;
+on('send','click',function(e){
+  e.preventDefault();if(busy)return;update();
+  if(!ready()){
+    var f=[];
+    if(!selDate)f.push('o dia');else if(!slot)f.push('o horário');
+    if(!svc)f.push('o serviço');
+    if($('name').value.trim().length<2)f.push('seu nome');
+    if($('tel').value.replace(/\D/g,'').length<10)f.push('seu telefone com DDD');
+    $('sum').textContent='Falta: '+f.join(', ')+'.';return;
+  }
+  var sd=selDate,sl=slot,sv=svc,nm=$('name').value.trim(),tl=$('tel').value.trim(),btn=$('send');
+  busy=true;btn.textContent='Reservando…';
+  tx(function(d){
+    if(estado(sd,sl,d)!=='livre')return{err:'busy'};
+    var s=d.svcs.filter(function(x){return x.id===sv})[0];
+    if(!s||!s.ativo)return{err:'Este serviço não está mais disponível.'};
+    d.ags.push({id:d.seq++,data:sd,hora:sl,nome:nm,tel:tl,serv:s.nome,valor:s.preco,status:'pendente',criado:new Date().toISOString()});
+    return{s:s};
+  },function(ok,r){
+    busy=false;btn.textContent='Confirmar agendamento';
+    if(!ok){
+      renderSite();
+      if(r&&r.err==='busy'){slot=null;renderSlots();update();$('hint').hidden=false;$('hint').textContent='Este horário acabou de ser reservado. Escolha outro horário.'}
+      else $('sum').textContent=(r&&r.err)||'Não foi possível confirmar. Tente novamente.';
+      return;
+    }
+    var url=waUrl()+'?text='+encodeURIComponent(msg(r.s));
+    slot=null;svc=null;$('name').value='';$('tel').value='';
+    renderSite();
+    $('wa2').href=url;$('ok').hidden=false;
+    setTimeout(function(){try{window.location.href=url}catch(z){}},600);
+  });
+});
+/* ===== ADMIN ===== */
+var logged=false,tab='dash',bDate=iso(new Date()),fil='todos';
+function toast(t){var x=$('toast');x.textContent=t;x.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(function(){x.style.display='none'},2600)}
+function banner(){return net==='local'?'<div class="card" style="border-color:#d46a63">⚠️ Servidor não configurado: os agendamentos ficam só NESTE aparelho. Configure o DB_URL no topo do código.</div>':net==='off'?'<div class="card" style="border-color:#d46a63">⚠️ Sem conexão com o servidor. Mostrando os últimos dados salvos.</div>':'<div class="card">🟢 Sincronizado com o servidor.</div>'}
+function mut(fn,msg){tx(fn,function(ok,r){
+  if(!ok)toast((r&&r.err&&r.err!=='busy')?r.err:'Não foi possível salvar.');
+  else toast(typeof msg==='function'?msg(r):msg);
+  renderSite();admRender();
+})}
+function ask(b){if(b.dataset.arm==='1')return true;b.dataset.arm='1';b.dataset.old=b.textContent;b.textContent='Toque de novo para confirmar';setTimeout(function(){b.dataset.arm='';b.textContent=b.dataset.old},4000);return false}
+function byDT(a,b){return(a.data+a.hora)<(b.data+b.hora)?-1:1}
+function card(a){
+  var b='';
+  if(a.status==='pendente')b+='<button data-a="st" data-id="'+a.id+'" data-v="confirmado">✅ Confirmar</button>';
+  if(a.status==='pendente'||a.status==='confirmado')b+='<button data-a="st" data-id="'+a.id+'" data-v="concluido">🏁 Concluir</button><button data-a="st" data-id="'+a.id+'" data-v="cancelado">❌ Cancelar</button>';
+  b+='<button data-a="del" data-id="'+a.id+'">🗑 Excluir</button>';
+  return'<div class="card"><b>📅 '+br(a.data)+'/'+a.data.slice(0,4)+' · 🕐 '+a.hora+'</b><span class="st st-'+a.status+'">'+a.status.toUpperCase()+'</span><br>👤 '+esc(a.nome)+' · 📱 '+esc(a.tel)+'<br>💈 '+esc(a.serv)+' · 💰 '+money(a.valor)+'<div class="bt">'+b+'</div></div>';
+}
+function vDash(d){
+  var h=iso(new Date()),v=d.ags.filter(function(a){return a.status!=='cancelado'}),
+  hoje=v.filter(function(a){return a.data===h}).sort(byDT),
+  prox=v.filter(function(a){return a.data+' '+a.hora>h+' '+nowHM()}).sort(byDT).slice(0,8),
+  oc=[],li=[];
+  if(d.cfg.dias[new Date().getDay()])slotsOf(d.cfg).forEach(function(t){var e=estado(h,t,d);if(e==='ocup')oc.push(t);if(e==='livre')li.push(t)});
+  var ch=function(a){return a.length?'<div class="chips">'+a.map(function(t){return'<span>'+t+'</span>'}).join('')+'</div>':'<p>—</p>'};
+  return'<h3>Agendamentos de hoje ('+hoje.length+')</h3>'+(hoje.map(card).join('')||'<p>Nenhum.</p>')+'<h3>Próximos agendamentos</h3>'+(prox.map(card).join('')||'<p>Nenhum.</p>')+'<h3>Hoje: horários ocupados ('+oc.length+')</h3>'+ch(oc)+'<h3>Hoje: horários disponíveis ('+li.length+')</h3>'+ch(li);
+}
+function vAg(d){
+  var l=d.ags.slice().sort(byDT).filter(function(a){return fil==='todos'||a.status===fil});
+  return'<label>Filtrar</label><select data-a="fil">'+['todos','pendente','confirmado','concluido','cancelado'].map(function(x){return'<option'+(x===fil?' selected':'')+'>'+x+'</option>'}).join('')+'</select><h3>'+l.length+' agendamento(s)</h3>'+(l.map(card).join('')||'<p>Nenhum agendamento.</p>');
+}
+function vHor(d){
+  var c=d.cfg,h='<h3>Funcionamento</h3><div class="g2"><div><label>Abertura</label><input type="time" id="ha" value="'+c.abre+'"></div><div><label>Fechamento</label><input type="time" id="hf" value="'+c.fecha+'"></div></div><label>Intervalo (minutos)</label><select id="hi">'+[15,20,30,40,45,60].map(function(x){return'<option'+(x===c.int?' selected':'')+'>'+x+'</option>'}).join('')+'</select><label>Dias abertos</label><div class="dz">'+NM.map(function(n,i){return'<label><input type="checkbox" class="dc" data-i="'+i+'"'+(c.dias[i]?' checked':'')+'> '+n+'</label>'}).join('')+'</div><p><button data-a="sh">💾 Salvar horários</button></p><h3>Bloquear horários</h3><label>Dia</label><input type="date" data-a="bd" value="'+bDate+'"><p style="color:var(--mute)">Toque para bloquear/desbloquear. Bloqueados somem para o cliente.</p><div class="bg">';
+  slotsOf(c).forEach(function(t){var e=estado(bDate,t,d);
+    h+=e==='ocup'?'<button class="o" disabled>🔴 '+t+'</button>':'<button data-a="blk" data-t="'+t+'"'+(e==='bloq'?' class="b"':'')+'>'+(e==='bloq'?'🚫':'🟢')+' '+t+'</button>'});
+  return h+'</div>';
+}
+function vSv(d){
+  return'<h3>Serviços</h3>'+d.svcs.map(function(s){return'<div class="row"><input data-s="'+s.id+'" data-f="nome" value="'+esc(s.nome)+'"><input data-s="'+s.id+'" data-f="preco" type="number" min="0" step="0.01" value="'+s.preco+'"><label style="display:flex;gap:6px;margin:0;color:var(--fg)"><input type="checkbox" data-s="'+s.id+'" data-f="ativo"'+(s.ativo?' checked':'')+'>Ativo</label><button data-a="ds" data-id="'+s.id+'">🗑</button></div>'}).join('')+'<h3>Novo serviço</h3><div class="row"><input id="nn" placeholder="Nome"><input id="np" type="number" min="0" step="0.01" placeholder="Preço"><button data-a="as">➕ Adicionar</button></div>';
+}
+function vCfg(d){
+  var c=d.cfg,f=function(l,i,v){return'<label>'+l+'</label><input id="'+i+'" value="'+esc(v)+'">'};
+  return'<h3>Configurações</h3>'+f('Nome da barbearia','cn',c.nome)+f('WhatsApp (só números, com 55 + DDD)','cw',c.wa)+f('Endereço (rua, número, cidade)','ce',c.end)+f('Instagram (@usuario ou link)','ci',c.insta)+'<label>Nova senha (deixe em branco para manter)</label><input id="cs" type="password" autocomplete="new-password">'+'<p><button data-a="sc">💾 Salvar configurações</button></p>';
+}
+function admRender(){
+  var b=$('admBody');
+  if(!logged){b.innerHTML=banner()+'<label>Senha</label><input type="password" id="pw" autocomplete="off"><p><button type="button" data-a="login">Entrar</button></p><p id="pe" style="color:#d46a63"></p>';return}
+  var d=load(),T2=[['dash','📊 Dashboard'],['ag','📅 Agendamentos'],['hor','🕐 Horários'],['sv','💈 Serviços'],['cfg','⚙️ Config.']];
+  b.innerHTML=banner()+'<nav>'+T2.map(function(t){return'<button type="button" data-a="tab" data-v="'+t[0]+'" aria-pressed="'+(tab===t[0])+'">'+t[1]+'</button>'}).join('')+'<button type="button" data-a="out">Sair</button></nav>'+({dash:vDash,ag:vAg,hor:vHor,sv:vSv,cfg:vCfg})[tab](d);
+}
+function login(){
+  var p=$('pw').value;
+  if(pw(p)===load().cfg.sh){logged=true;admRender()}else $('pe').textContent='Senha incorreta.';
+}
+function refresh(){sync(function(){renderSite();if(logged&&!$('adm').hidden&&!/INPUT|SELECT/.test(document.activeElement.tagName))admRender()})}
+on('admBtn','click',function(){$('adm').hidden=false;document.body.style.overflow='hidden';admRender();sync(function(){renderSite();if(logged)admRender()})});
+on('admX','click',function(){$('adm').hidden=true;document.body.style.overflow=''});
+on('adm','keydown',function(e){if(e.key==='Enter'&&e.target.id==='pw')login()});
+on('adm','click',function(e){
+  var b=e.target.closest('button[data-a]');if(!b)return;
+  var a=b.dataset.a,id=+b.dataset.id,v=b.dataset.v;
+  if(a==='login')return login();
+  if(a==='out'){logged=false;return admRender()}
+  if(a==='tab'){tab=v;return admRender()}
+  if(a==='st')return mut(function(d){var g=d.ags.filter(function(x){return x.id===id})[0];if(!g)return{err:'Agendamento não encontrado.'};g.status=v;return{}},v==='cancelado'?'Cancelado. Horário liberado.':'Status: '+v);
+  if(a==='del'){if(!ask(b))return;return mut(function(d){d.ags=d.ags.filter(function(x){return x.id!==id});return{}},'Excluído. Horário liberado.')}
+  if(a==='blk'){var t=b.dataset.t,ds=bDate;return mut(function(d){var l=d.bloq[ds]||[],i=l.indexOf(t);if(i>-1)l.splice(i,1);else l.push(t);if(l.length)d.bloq[ds]=l;else delete d.bloq[ds];return{off:i>-1}},function(r){return r.off?'Desbloqueado':'Bloqueado'})}
+  if(a==='sh'){
+    var ab=$('ha').value,fe=$('hf').value,it=+$('hi').value,dias=[0,0,0,0,0,0,0];
+    if(!ab||!fe||tm(ab)+it>tm(fe))return toast('Confira abertura, fechamento e intervalo');
+    [].forEach.call(document.querySelectorAll('.dc'),function(x){dias[+x.dataset.i]=x.checked?1:0});
+    return mut(function(d){d.cfg.abre=ab;d.cfg.fecha=fe;d.cfg.int=it;d.cfg.dias=dias;return{}},'Horários salvos');
+  }
+  if(a==='as'){var n=$('nn').value.trim(),pr=+$('np').value||0;if(!n)return toast('Informe o nome');return mut(function(d){d.svcs.push({id:d.seq++,nome:n,preco:pr,ativo:true});return{}},'Serviço adicionado')}
+  if(a==='ds'){if(!ask(b))return;return mut(function(d){d.svcs=d.svcs.filter(function(x){return x.id!==id});return{}},'Serviço excluído')}
+  if(a==='sc'){
+    var w=$('cw').value.replace(/\D/g,'');if(w.length<=11)w='55'+w;
+    if(w.length<12)return toast('WhatsApp inválido');
+    var nome=$('cn').value.trim();if(!nome)return toast('Informe o nome');
+    var end=$('ce').value.trim(),ig=$('ci').value.trim(),ns=$('cs').value.trim();
+    if(ns&&ns.length<4)return toast('A senha precisa ter ao menos 4 caracteres');
+    return mut(function(d){d.cfg.nome=nome;d.cfg.wa=w;d.cfg.end=end;d.cfg.insta=ig;if(ns)d.cfg.sh=pw(ns);return{}},'Configurações salvas');
+  }
+});
+function chg(e){
+  var t=e.target;
+  if(t.dataset.a==='fil'){fil=t.value;return admRender()}
+  if(t.dataset.a==='bd'){if(t.value){bDate=t.value;admRender()}return}
+  if(t.dataset.s){
+    var sid=+t.dataset.s,f=t.dataset.f,val=t.value,chk=t.checked;
+    if(f==='nome'&&!val.trim())return admRender();
+    tx(function(d){var s=d.svcs.filter(function(x){return x.id===sid})[0];if(!s)return{err:'Serviço não encontrado.'};
+      if(f==='nome')s.nome=val.trim();if(f==='preco')s.preco=Math.max(0,+val||0);if(f==='ativo')s.ativo=chk;return{}},
+    function(ok,r){toast(ok?'Salvo':(r&&r.err)||'Erro ao salvar');renderSite();if(!ok)admRender()});
+  }
+}
+on('adm','change',chg);
+on(window,'storage',function(){if(!EP){STATE=norm(readLocal());renderSite();if(logged&&!$('adm').hidden)admRender()}});
+T(function(){$('y').textContent=new Date().getFullYear()});
+T(renderSite);
+T(function(){sync(function(){renderSite()})});
+setInterval(function(){T(refresh)},20000);
+on(document,'visibilitychange',function(){if(!document.hidden)refresh()});
+on(window,'focus',refresh);
+on(window,'pageshow',refresh);
+});
+</script>
+</body>
+</html>
